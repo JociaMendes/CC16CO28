@@ -1,22 +1,26 @@
 #include<iostream>
 using namespace std;
 int main()
-{ //my code
+{
     string a;
     int i;
     cout<<"enter the string:";
     getline(cin,a);
-    if((a>=65 && a<=90))
+    for(i=0;i<a.size();i++)
     {
-        cout<< "alphbet";
+    if((a[i]>='a' && a[i]<='z')||(a[i]>='A' && a[i]<='Z'))
+    {
+        cout<< "Alphbet ";
     }
-    else if((a>=48 && a<=57))
+    else if(a[i]>=48 && a[i]<=57)
     {
-        cout<<"digit";
+        cout<<"Digit ";
     }
      else
      {
         cout << " Special Character ";
      }
+     }
+     return 0;
 }
 
